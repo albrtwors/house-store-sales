@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
-
+    const pathname = usePathname()
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
+    useEffect(() => {
+        setMenuOpen(false)
+    }, [pathname])
     return (
         <nav className="flex flex-col md:flex-row items-center md:justify-center p-4 bg-black">
             {/* Botón desplegable solo en pantallas pequeñas */}

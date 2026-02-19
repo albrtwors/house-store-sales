@@ -137,16 +137,22 @@ export default function Create() {
     return (
         <div className="flex flex-col gap-2 items-center">
             <h1 className="text-3xl font-bold">Haz una Venta</h1>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-2">
-                <GenericInput
-                    name="person"
-                    label="Persona"
-                    placeholder="Ingresa una persona"
-                    type="text"
-                />
+
+            <form onSubmit={handleSubmit} className="flex flex-col px-3 gap-6">
+                <div>
+                    <GenericInput
+                        name="person"
+                        label="Persona"
+                        placeholder="Ingresa una persona"
+                        type="text"
+                    />
+                </div>
                 <div className="flex flex-col gap-1">
+
                     <h1 className="font-bold">Ha pagado?</h1>
+
                     <input name="paid" type="checkbox"></input>
+
                 </div>
 
                 <div className="flex flex-col gap-1">
