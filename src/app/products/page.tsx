@@ -1,6 +1,7 @@
 'use client';
 
 import { clientSupabase } from '@/utils/clientSupabase';
+import Link from 'next/link';
 
 import { useState, useEffect } from 'react';
 
@@ -50,7 +51,9 @@ export default function Page() {
                                 <div><strong>Cantidad en stock:</strong> {product.stock}</div>
                                 <div className='flex gap-2'>
                                     <button onClick={() => handleDeleteProduct(product.id)} className='p-2 bg-red-600 font-bold text-white rounded-lg'>Eliminar</button>
-                                    <button className='p-2 bg-green-500 font-bold text-white rounded-lg'>Editar</button>
+                                    <Link href={`/products/edit/${product.id}`}>
+                                        <button className='p-2 bg-green-500 font-bold text-white rounded-lg'>Editar</button>
+                                    </Link>
                                 </div>
                             </li>
                         ))}

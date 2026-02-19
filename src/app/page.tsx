@@ -83,7 +83,7 @@ export default function Home() {
         </div>
 
         {/* Tabla de ventas */}
-        <div className="mx-3 w-full overflow-scroll flex justify-center">
+        <div className="mx-3 w-full overflow-scroll flex ">
           <table className="w-full border-collapse border border-gray-400">
             <thead>
               <tr className="bg-black">
