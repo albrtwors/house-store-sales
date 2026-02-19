@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   const fetchSales = async () => {
-    const { data, error }: any = await clientSupabase.from('sales').select('*');
+    const { data, error }: any = await clientSupabase.from('sales').select('*').order('created_at', { ascending: false });;
     if (error) {
       console.error(error);
     } else {
